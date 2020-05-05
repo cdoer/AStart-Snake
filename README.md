@@ -7,8 +7,17 @@
 
 此BST非平衡BST。
 
+#  2020-05-06更新
+目前基本实现吃满，但是很费时间，走S形估计可以很快，不过下图算法又不像完全走S, 总之达不到下图俄罗斯大佬的优秀。
+暂时不折腾了，改日再会。
+![贪吃蛇](./snake.gif)
+
 # 效果图
+旧版本地址：[v1版本](https://github.com/cdoer/AStar-Snake/tree/v1)
 ![贪吃蛇](./astar-snake.gif)
+
+# 效果图2
+![贪吃蛇](./astar-snake2.gif)
 
 
 # 运行方法
@@ -20,12 +29,14 @@ npm run start
 # 配置参数
 ```
 let defaultOps = {
+    debug:true,//是否开启日志，控制台打印运行状态
     style:"margin:0 auto;background:#fff;display: block;",//画布样式
-    headColor:"red",//头颜色
+    headColor:"pink",//头颜色
     bodyColor:"#ccc",//身体颜色
     foodColor:"red",//食物颜色
-    xSize:60,//矩阵长
-    ySize:60,//矩阵宽
+    tailColor:"blue",//尾巴颜色
+    xSize:20,//矩阵长
+    ySize:20,//矩阵宽
     unitSize:10,//单元格大小
     border:"1px solid #ccc"//画布边框
 }

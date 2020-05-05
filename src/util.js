@@ -1,5 +1,11 @@
 let Util  = {
+    debug:false,
     //注意没有实现深度拷贝
+    log(msg){
+        if(Util.debug){
+            console.log(msg);
+        }
+    },
     extend(){
         var i =1, target =  arguments[0],length = arguments.length,options,src,copy,name;
         if(typeof target!="object" &&typeof target!="function"){
@@ -77,6 +83,20 @@ let Util  = {
                 return node;
             }
             return findMinEle(node.left);
+        }
+
+
+        this.findMax = function () {
+            if(this.root==null) return null;
+            let max = findMaxEle(this.root);
+            return  max;
+        }
+
+        var findMaxEle = function (node) {
+            if (node.right == null) {//说明此节点已经是最小的了
+                return node;
+            }
+            return findMaxEle(node.right);
         }
 
         var removeMinEle = function (node) {
