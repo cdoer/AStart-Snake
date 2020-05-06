@@ -275,7 +275,7 @@ let snakeFunc = {
             unitSize = opt.unitSize,
             data = this.data;
         let size = unitSize;
-        canvas.fillRect(pos[0]*unitSize,pos[1]*unitSize,size+1,size+1);
+        canvas.fillRect(pos[0]*unitSize,pos[1]*unitSize,size,size);
     },
     getPixelRatio(context) {
         var backingStore = context.backingStorePixelRatio ||
@@ -387,10 +387,10 @@ let defaultOps = {
     bodyColor:"#ccc",//身体颜色
     foodColor:"red",//食物颜色
     tailColor:"blue",//尾巴颜色
-    xSize:20,//矩阵长
-    ySize:20,//矩阵宽
-    unitSize:10,//单元格大小
-    border:"1px solid #ccc"//画布边框
+    xSize:30,//矩阵长
+    ySize:30,//矩阵宽
+    unitSize:20,//单元格大小
+    border:"1px solid red"//画布边框
 }
 
 export default snake
