@@ -127,8 +127,9 @@ let snakeFunc = {
             pos = _this.findPerfectNode(head, last, true);
             Util.log("跟着尾巴走");
             _this.followLast= true;
-            let num = _this.opt.xSize*_this.opt.ySize;
-            _this.maxcount = Math.floor(Math.random()*(num*0.25))+10;
+            let num = Object.keys(_this.open).length;
+            //随机跟着尾巴走得次数   使用剩余得空白位置  减少绕圈太多得情况
+            _this.maxcount = Math.floor(Math.random()*(num*0.25))+Math.floor(Math.random()*10);
         }
         _this.addCloseMap(last);
         Util.log("closeMap=" + Object.keys(_this.closeMap).length + "" +
