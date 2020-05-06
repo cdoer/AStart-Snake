@@ -129,7 +129,7 @@ let snakeFunc = {
             _this.followLast= true;
             let num = Object.keys(_this.open).length;
             //随机跟着尾巴走得次数   使用剩余得空白位置  减少绕圈太多得情况
-            _this.maxcount = Math.floor(Math.random()*(num*0.25))+Math.floor(Math.random()*10);
+            _this.maxcount = Math.max(Math.floor(Math.random()*(num*0.25)),1);
         }
         _this.addCloseMap(last);
         Util.log("closeMap=" + Object.keys(_this.closeMap).length + "" +
