@@ -1,6 +1,6 @@
 # 博客
-地址：[YANG个人博客](https://blog.yxyvpn.com/)
-snake线上地址：[Astar-Snake](https://blog.yxyvpn.com/snake)
+地址：[YANG个人博客](https://blog.yxyvpn.top/)
+snake线上地址：[Astar-Snake](https://blog.yxyvpn.top/snake)
 
 # AStar-Snake
 基于A*算法+canvas+BST的自动寻路贪吃蛇-----JS版，目前还没实现吃满算法
